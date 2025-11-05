@@ -1,0 +1,117 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container" class="cont">
+      <h2 class="title">Welcome</h2>
+      <p class="info">Learning DOM manipulation</p>
+      <p class="info">Second paragraph</p>
+      <p id="para" data-info="meta">Some info</p>
+    </div>
+    <script>
+      const p = document.querySelectorAll("p");
+      console.log(p.textContent);
+      // p.setAttribute("data-info", "updated");
+      // p.setAttribute("data-info", "updated");
+      // console.log(p.getAttribute("data-info"));
+
+      const container = document.getElementById("container");
+
+      // container.innerHTML = "<em>DOM</em> Practice";
+      // console.log(container.textContent);
+
+      // const infos = document.getElementsByClassName("cont");
+      // console.log(infos);
+
+      // const info = document.querySelector(".cont");
+      // info.innerHTML = "<p>Hey their</P>";
+      // console.log(info);
+      // console.log(container);
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shuffle Text Assignment</title>
+  </head>
+  <body>
+    <h2>DOM Lesson 1 — Shuffle List Text</h2>
+    <ul id="itemList">
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Cherry</li>
+      <li>Mango</li>
+      <li>Orange</li>
+    </ul>
+    <button id="shuffleBtn">Shuffle Text</button>
+    <div id="list"></div>
+    <div id="box">Center</div>
+
+    <script>
+      // const listItems = document.querySelectorAll("#itemList li");
+      // const button = document.getElementById("shuffleBtn");
+      // console.log(Math.random());
+
+      // function shuffleArray(arr) {
+      //   for (let i = arr.length - 1; i > 0; i--) {
+      //     const j = Math.floor(Math.random() * (i + 1));
+      //     [arr[i], arr[j]] = [arr[j], arr[i]];
+      //   }
+      //   return arr;
+      // }
+
+      // button.addEventListener("click", () => {
+      //   // 1. Extract text
+      //   const texts = Array.from(listItems).map((li) => li.textContent);
+
+      //   // 2. Shuffle
+      //   const shuffled = shuffleArray(texts);
+
+      //   // 3. Assign back
+      //   listItems.forEach((li, idx) => (li.textContent = shuffled[idx]));
+      // // });
+      // const list = document.getElementById("list");
+      // console.log(list);
+
+      // const ul = document.createElement("ul");
+      // ["Alpha", "Beta", "Gamma"].forEach((label) => {
+      //   const li = document.createElement("li");
+      //   li.textContent = label; // safe text
+      //   ul.append(li);
+      //   console.log(ul); // append accepts nodes or strings
+      // });
+      // list.append(ul);
+      // console.log(list);
+
+      // const h = document.createElement("h3");
+      // h.textContent = "My Items";
+      // list.append(h);
+
+      // const h1 = document.createElement("h1");
+      // h1.textContent = "My New Items";
+      // list.prepend(h1);
+
+      // appendChild -- only append HTML elements
+      // append -- append elements or text
+      // insertBefore -- insert element before another element
+      // prepend -- insert element or text at the beginning 
+
+      const box = document.getElementById("box");
+      box.before("Before text");
+      box.after("After text");
+
+    </script>
+  </body>
+</html>
+
+<!-- 5 selectors 
+ 1. getElementById -- single element 
+ 2. getElementsByClass -- HTML collection like and array -->
